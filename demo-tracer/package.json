@@ -1,0 +1,32 @@
+{
+  "name": "demo-tracer",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "sst start",
+    "build": "sst build",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "console": "sst console",
+    "typecheck": "tsc --noEmit",
+    "test": "sst bind -- vitest run"
+  },
+  "devDependencies": {
+    "@serverless-stack/cli": "^1.18.4",
+    "@serverless-stack/resources": "^1.18.4",
+    "@tsconfig/node16": "^1.0.3",
+    "aws-cdk-lib": "2.50.0",
+    "typescript": "^4.9.3",
+    "vitest": "^0.25.3"
+  },
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^1.5.0",
+    "@aws-lambda-powertools/metrics": "^1.5.0",
+    "@aws-lambda-powertools/tracer": "^1.5.0",
+    "@middy/core": "^4.0.0",
+    "@serverless-stack/node": "^1.18.4"
+  },
+  "workspaces": [
+    "services"
+  ]
+}
